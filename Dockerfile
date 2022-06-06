@@ -1,4 +1,4 @@
-FROM bitnami/postgresql:14-debian-11
+FROM  postgis/postgis:13-master
 RUN apt update -y
 RUN apt install -y awscli mcrypt
 COPY do_backup.sh /
