@@ -1,4 +1,4 @@
-FROM mdillon/postgis:9.6
+FROM bitnami/postgresql
 RUN apt update -y
 RUN apt install -y awscli mcrypt
 COPY do_backup.sh /
