@@ -1,5 +1,6 @@
 #!/bin/bash
-export DUMP_FILE=/backup_`date +%Y%m%d_%H%M%S`.pgdump
+export SHUBHAM=`date +%Y%m%d_%H%M%S`
+export DUMP_FILE="backup_${SHUBHAM}"
 PGPASSWORD=$POSTGRES_PASSWORD pg_dump -d $POSTGRES_DB -U $POSTGRES_USER -h $POSTGRES_HOST -f $DUMP_FILE
 bzip2 $DUMP_FILE
 mcrypt ${DUMP_FILE}.bz2 -k $DB_BACKUP_PASSWORD
