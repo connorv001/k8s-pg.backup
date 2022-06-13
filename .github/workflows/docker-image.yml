@@ -27,3 +27,10 @@ jobs:
         with:
           push: true
           tags: connorv001/pg-k8s.backup:latest
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          file: {context}/versions/Dockerfile-14
+          push: true
+          tags: connorv001/pg-k8s.backup:14
